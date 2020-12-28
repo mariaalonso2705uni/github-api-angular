@@ -3,8 +3,8 @@
 
 # Project Description
 This repository holds content for two assignments:
-..* Assignment 5: Integrate the GitHub Api to retreive and display data
-..* Assignment 6: Integrate the GitHub API to display, interpret and visualize the data retreived 
+* Assignment 5: Integrate the GitHub Api to retreive and display data
+* Assignment 6: Integrate the GitHub API to display, interpret and visualize the data retreived 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
