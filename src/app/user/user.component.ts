@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './../services/users.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-user',
@@ -8,22 +9,21 @@ import { UserService } from './../services/users.service';
 })
 export class UserComponent implements OnInit {
 
-  username = 'mariaalonso2705uni';
+  username: FormControl;
   countRepositories: any;
   repositories = [];
+  status = false;
 
   constructor(private userService: UserService) { }
 
-  ngOnInit() {
-    this.searchUser();
-  }
+  ngOnInit() {  }
 
   searchUser() {
     this.userService.getUser(this.username).subscribe (
       (result) => {
         this.countRepositories = result.length;
         this.repositories = result;
-        console.log(result);
+        this.status = true;
       });
   }
 }

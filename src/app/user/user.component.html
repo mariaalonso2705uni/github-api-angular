@@ -1,10 +1,14 @@
-<p>
-  user works!
-</p>
+<form>
+  <div class="md-form">
+    <label>Enter Username: </label><br>
+    <input mdbInput type="username" class="form-control" name="username" [(ngModel)]="username" placeholder="Username">
+  </div>
+  <button type="submit" mdbBtn color="primary" (click)="searchUser()">Search</button>
+</form>
 
-{{ username }}
-
-<div *ngFor="let repository of repositories">
-      Name: {{repository.name}} 
+<div *ngIf="status">
+  <strong>Public Repositories: </strong><br>
+  <div *ngFor="let repository of repositories">
+      {{repository.name}}
+  </div>
 </div>
-
