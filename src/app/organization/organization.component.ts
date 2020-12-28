@@ -18,8 +18,7 @@ export class OrganizationComponent implements OnInit {
 
   constructor(private organizationService: OrganizationService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   getOrganizationDetails() {
     this.organizationService.getOrganization(this.login).subscribe(
@@ -40,6 +39,4 @@ export class OrganizationComponent implements OnInit {
       }
     );
   }
-
-
 }
