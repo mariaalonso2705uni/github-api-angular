@@ -6,12 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { UserService } from './services/users.service';
+import { OrganizationService} from './services/organizations.services';
+import { OrganizationComponent } from './organization/organization.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    OrganizationComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,8 @@ import { UserService } from './services/users.service';
     HttpClientModule
   ],
   providers: [
-    UserService
+    UserService, 
+    OrganizationService
   ],
   bootstrap: [AppComponent]
 })
