@@ -11,6 +11,7 @@ export class OrganizationComponent implements OnInit {
 
   login: FormControl;
   details = [];
+  status = false;
 
   constructor(private organizationService: OrganizationService) { }
 
@@ -21,6 +22,8 @@ export class OrganizationComponent implements OnInit {
     this.organizationService.getOrganization(this.login).subscribe(
       (result) => {
         this.details = result;
+        console.log(this.details);
+        this.status = true;
       }
     );
   }

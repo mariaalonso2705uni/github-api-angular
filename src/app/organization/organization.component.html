@@ -1,3 +1,13 @@
-<p>
-  organization works!
-</p>
+<form>
+  <div class="md-form">
+    <label>Enter Organization Login Name: </label>
+    <input mdbInput type="login" class="form-control" name="login"  [(ngModel)]="login" placeholder="Orgnization Login"> 
+  </div>
+  <button type="submit" mdbBtn color="primary" (click)="getOrganizationDetails()">Search</button>
+</form>
+
+<div *ngIf="status">
+  <strong>Name: </strong> {{details.name}} <br>
+  <strong>Description: </strong> {{details.description}} <br>
+  <strong>Public Repositories: </strong> {{details.public_repos}} <br>
+</div>
