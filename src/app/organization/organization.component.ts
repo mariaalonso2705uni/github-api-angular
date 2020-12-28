@@ -10,8 +10,11 @@ import { OrganizationService } from './../services/organizations.services';
 export class OrganizationComponent implements OnInit {
 
   login: FormControl;
+  login2: FormControl;
   details = [];
+  details2 = [];
   status = false;
+  status2 = false;
 
   constructor(private organizationService: OrganizationService) { }
 
@@ -24,6 +27,16 @@ export class OrganizationComponent implements OnInit {
         this.details = result;
         console.log(this.details);
         this.status = true;
+      }
+    );
+  }
+
+  getOrganizationDetails2() {
+    this.organizationService.getOrganization(this.login2).subscribe(
+      (result) => {
+        this.details2 = result;
+        console.log(this.details);
+        this.status2 = true;
       }
     );
   }

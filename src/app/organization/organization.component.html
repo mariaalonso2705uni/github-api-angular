@@ -1,13 +1,37 @@
-<form>
-  <div class="md-form">
-    <label>Enter Organization Login Name: </label><br>
-    <input mdbInput type="login" class="form-control" name="login"  [(ngModel)]="login" placeholder="Orgnization Login"> 
-  </div>
-  <button type="submit" mdbBtn color="primary" (click)="getOrganizationDetails()">Search</button>
-</form>
+<div class="container mt-4">
+  <div class="row">
+    <div class="col">
+      <form>
+        <div class="md-form">
+          <label>Enter Organization Login Name: </label><br>
+          <input mdbInput type="login" class="form-control" name="login" [(ngModel)]="login"
+            placeholder="Orgnization Login">
+        </div>
+        <button class="btn btn-primary mt-2 mb-3" type="submit" mdbBtn color="primary" (click)="getOrganizationDetails()">Search</button>
+      </form>
 
-<div *ngIf="status">
-  <strong>Name: </strong> {{details.name}} <br>
-  <strong>Description: </strong> {{details.description}} <br>
-  <strong>Public Repositories: </strong> {{details.public_repos}} <br>
+      <div *ngIf="status">
+        <strong>Name: </strong> {{details.name}} <br>
+        <strong>Description: </strong> {{details.description}} <br>
+        <strong>Public Repositories: </strong> {{details.public_repos}} <br>
+      </div>
+    </div>
+
+    <div class="col">
+      <form>
+        <div class="md-form">
+          <label>Enter Organization Login Name: </label><br>
+          <input mdbInput type="login2" class="form-control" name="login2" [(ngModel)]="login2"
+            placeholder="Orgnization Login">
+        </div>
+        <button class="btn btn-primary mt-2 mb-3" type="submit" mdbBtn color="primary" (click)="getOrganizationDetails2()">Search</button>
+      </form>
+
+      <div *ngIf="status2">
+        <strong>Name: </strong> {{details2.name}} <br>
+        <strong>Description: </strong> {{details2.description}} <br>
+        <strong>Public Repositories: </strong> {{details2.public_repos}} <br>
+      </div>
+    </div>
+  </div>
 </div>
